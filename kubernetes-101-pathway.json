@@ -1,0 +1,11 @@
+{
+  "title": "Kubernetes 101",
+  "description": "Onboarding training for Kubernetes clusters",
+  "courses": [
+    {
+      "course_id": "deploying-pod",
+      "title": "Deploying a pod",
+      "description": "Tutorial on deploying a pod to a kubernetes cluster"
+    }
+  ]
+}
