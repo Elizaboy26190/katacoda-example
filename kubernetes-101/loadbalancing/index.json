@@ -9,6 +9,10 @@
         {
           "file": "deployments.yaml",
           "target": "/kubernetes101"
+        },
+        {
+          "file": "ingress.yaml",
+          "target": "/kubernetes101"
         }
       ]
     },

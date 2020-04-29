@@ -2,13 +2,15 @@
 
 Ingress rules are an object type with Kubernetes. The rules can be based on a request host (domain), or the path of the request, or a combination of both.
 
+We have already created our template file in `ingress.yaml`{{open}} and you cna view the source code below.
+
 <pre class="file"
 data-filename="ingress.yaml"
 data-target="replace">
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: kubernetes101ingress
+  name: example-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
@@ -18,12 +20,18 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: webapp1
+          serviceName: web
           servicePort: 8080</pre>
           
 Create the Ingress resource by running the following command:
-`kubectl apply -f example-ingress.yaml`{{execute}}
+`kubectl apply -f ingress.yaml`{{execute}}
 
 Verify the ingress resource is running by running `kubectl get ingress`{{execute}} 
 
-`[[HOST_IP]] asdasd`
+Add the following line to the bottom of the /etc/hosts file to add the host ip to the list of hosts.
+
+`[[HOST_IP]] kubernetes101.info`
+
+We can check our ingress controller is diverting traffic by running
+`curl kubernetes101.info`{{execute}}
+
