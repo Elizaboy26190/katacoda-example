@@ -2,9 +2,9 @@ For our next exercises to test the ingress controller we wil begin by using the 
 
 ## Task
 
-Create a deployment entitled `web` using our standard image.
+Create a deployment entitled `web`.
 
-`kubectl create deployment web --image=katacoda/docker-http-server:latest`{{execute}}
+`kubectl create deployment web --image=gcr.io/google-samples/hello-app:2.0`{{execute}}
 
 Expose our deployment using the NodePort type
 
