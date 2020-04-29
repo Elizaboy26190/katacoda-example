@@ -6,6 +6,11 @@
       "course_id": "deploying-pod",
       "title": "Deploying a pod",
       "description": "Tutorial on deploying a pod to a kubernetes cluster"
+    },
+    {
+      "course_id": "loadbalancing",
+      "title": "Services and Loadbalancing",
+      "description": "Tutorial on Services and Loadbalancing"
     }
   ]
 }
