@@ -23,3 +23,7 @@ spec:
           
 Create the Ingress resource by running the following command:
 `kubectl apply -f example-ingress.yaml`{{execute}}
+
+Verify the ingress resource is running by running `kubectl get ingress`{{execute}} 
+
+[[HOST_IP]]
