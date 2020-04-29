@@ -1,0 +1,45 @@
+{
+  "title": "LoadBalancing and Scaling",
+  "description": "Tutorial on LoadBalancing and scaling",
+  "difficulty": "Beginner",
+  "time": "30",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "deployments.yaml",
+          "target": "/kubernetes101"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Services",
+        "text": "step1.md"
+      },
+      {
+        "title": "Labels",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hideHiddenFiles": true,
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/kubernetes101"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}
