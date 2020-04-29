@@ -7,10 +7,6 @@
     "assets": {
       "host01": [
         {
-          "file": "deployments.yaml",
-          "target": "/kubernetes101"
-        },
-        {
           "file": "ingress.yaml",
           "target": "/kubernetes101"
         }
@@ -18,32 +14,36 @@
     },
     "steps": [
       {
-        "title": "Services",
+        "title": "Sertup",
         "text": "step1.md"
+      },
+      {
+        "title": "Services",
+        "text": "step1a.md"
       },
       {
         "title": "Labels",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Ingress Controllers",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Set up first app",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Ingress rules",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "Set up our second app",
         "text": "step6.md"
       },
 
       {
-        "title": "Step 7",
+        "title": "Testing our ingress controller",
         "text": "step7.md",
         "answer": "step7-answer.md"
       }

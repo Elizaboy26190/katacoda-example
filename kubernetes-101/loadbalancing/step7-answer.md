@@ -1,1 +1,20 @@
-We now should have both our deployments running and our ingress controll
+Open the `ingress.yaml`{{open}} file
+
+<pre class="file"
+data-filename="ingress.yaml"
+data-target="replace">
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+  - host: kubernetes101.info
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: web
+          servicePort: 8080</pre>

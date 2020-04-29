@@ -1,5 +1,3 @@
-## Ingress Rules
-
 Ingress rules are an object type with Kubernetes. The rules can be based on a request host (domain), or the path of the request, or a combination of both.
 
 We have already created our template file in `ingress.yaml`{{open}} and you cna view the source code below.
@@ -26,7 +24,8 @@ spec:
 Create the Ingress resource by running the following command:
 `kubectl apply -f ingress.yaml`{{execute}}
 
-Verify the ingress resource is running by running `kubectl get ingress`{{execute}} 
+Verify the ingress resource is running by running `kubectl get ingress`{{execute}} and check the IP for minikube by running `minikube service web --url`{{execute}} and should see the following output
+`http://[[HOST_IP]]:[[HOST_PORT]]` 
 
 Add the following line to the bottom of the /etc/hosts file to add the host ip to the list of hosts.
 

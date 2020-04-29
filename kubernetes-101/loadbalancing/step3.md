@@ -1,5 +1,3 @@
-## Ingress controllers
-
 ## What is an Ingress Controller?
 An ingress controller provides an HTTP gateway to applications in the cluster. We expose the ingress controller to the internet, and it will route requests to the applications based on hostname, path or other conditions.
 
