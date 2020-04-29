@@ -1,0 +1,1 @@
+We now should have both our deployments running and our ingress controll
