@@ -6,8 +6,10 @@ and expose the deployment again `kubectl expose deployment web2 --type=NodePort 
 
 ## Task
 
-Open the `ingress.yaml`{{open}} file and add the following code to the end of the file
-<pre>      - path: /v2/*
+Open the `ingress.yaml`{{open}} file and add the following code to the end of the file            
+<pre class="file"
+data-filename="ingress.yaml"
+data-target="append">          - path: /v2/*
              backend:
                serviceName: web2
                servicePort: 8080</pre>

@@ -17,4 +17,8 @@ spec:
       - path: /
         backend:
           serviceName: web
+          servicePort: 8080
+      - path: /v2/*
+        backend:
+          serviceName: web2
           servicePort: 8080</pre>

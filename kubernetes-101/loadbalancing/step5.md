@@ -24,12 +24,12 @@ spec:
 Create the Ingress resource by running the following command:
 `kubectl apply -f ingress.yaml`{{execute}}
 
-Verify the ingress resource is running by running `kubectl get ingress`{{execute}} and check the IP for minikube by running `minikube service web --url`{{execute}} and should see the following output
+Verify the ingress resource is running by running `kubectl get ingress`{{execute}} and check the IP for minikube by running `minikube service web --url`{{execute}}. You should see the following output
 `http://[[HOST_IP]]:[[NODE_PORT]]` in our case  `http://[[HOST_IP]]:30480`.
 
 Add the following line to the bottom of the /etc/hosts file to add the host ip to the list of hosts.
 
-`[[HOST_IP]] kubernetes101.info`. This can be done by running the following command `echo "[[HOST_IP]] kubernetes101.info">>/etc/hosts`
+`[[HOST_IP]] kubernetes101.info`. This can be done by running the following command `echo "[[HOST_IP]] kubernetes101.info">>/etc/hosts`{{execute}}
 
 We can check our ingress controller is diverting traffic by running
 `curl kubernetes101.info`{{execute}}

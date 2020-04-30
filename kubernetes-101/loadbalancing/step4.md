@@ -17,3 +17,6 @@ Verify the Service is created and is available on a node port:
 Verify the service via NodePort:
 
 `minikube service web --url`{{execute}}
+
+You should see the following output
+`http://[[HOST_IP]]:[[NODE_PORT]]` in our case  `http://[[HOST_IP]]:30480`.
