@@ -25,6 +25,10 @@
         "text": "step1a.md"
       },
       {
+        "title": "Example - Creating a service using a clusterIP",
+        "text": "step1-clusterip.md"
+      },
+      {
         "title": "Example - Creating a service using an external IP",
         "text": "step1-externalip.md"
       },
@@ -41,6 +45,9 @@
       "text": "finish.md"
     }
   },
+  "files": [
+    "deployment.yaml", "service.yaml"
+  ],
   "environment": {
     "hideHiddenFiles": true,
     "uilayout": "editor-terminal",
