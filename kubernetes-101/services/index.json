@@ -1,0 +1,74 @@
+{
+  "title": "LoadBalancing and Scaling",
+  "description": "Tutorial on LoadBalancing and scaling",
+  "difficulty": "Intermediate",
+  "time": "30",
+  "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "service.yaml",
+          "target": "/kubernetes101"
+        }
+      ]
+    },
+    "steps": [
+      {
+        "title": "Setup",
+        "text": "step1.md"
+      },
+      {
+        "title": "Services",
+        "text": "step1a.md"
+      },
+      {
+        "title": "Example - Creating a service using an external IP",
+        "text": "step1-externalip.md"
+      },
+      {
+        "title": "Labels",
+        "text": "step2.md"
+      },
+      {
+        "title": "Ingress Controllers",
+        "text": "step3.md"
+      },
+      {
+        "title": "Set up first app",
+        "text": "step4.md"
+      },
+      {
+        "title": "Ingress rules",
+        "text": "step5.md"
+      },
+      {
+        "title": "Set up our second app",
+        "text": "step6.md",
+        "answer": "step6-answer.md"
+      },
+      {
+        "title": "Testing our ingress controller",
+        "text": "step7.md"
+      },
+      {
+        "title": "Load Balancers",
+        "text": "step8.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "foreground.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "hideHiddenFiles": true,
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/kubernetes101"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}

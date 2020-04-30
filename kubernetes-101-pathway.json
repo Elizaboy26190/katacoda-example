@@ -8,9 +8,14 @@
       "description": "Tutorial on deploying a pod to a kubernetes cluster"
     },
     {
+      "course_id": "services",
+      "title": "Services",
+      "description": "Tutorial on exposing your app outside of the cluster"
+    },
+    {
       "course_id": "loadbalancing",
-      "title": "Services and Loadbalancing",
-      "description": "Tutorial on Services and Loadbalancing"
+      "title": "Ingress and ladbalancing",
+      "description": "Tutorial on Ingress and Loadbalancing"
     }
   ]
 }
