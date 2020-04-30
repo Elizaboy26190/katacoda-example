@@ -1,6 +1,6 @@
 To test ability of our ingress controller to divert traffic to the correct pod we will create a second pod.
 
-`kubectl run web2 --image=gcr.io/google-samples/hello-app:2.0`{{execute}}
+`kubectl create deployment web2 --image=gcr.io/google-samples/hello-app:2.0`{{execute}}
 
 and expose the deployment again `kubectl expose deployment web2 --type=NodePort --port=8080`{{execute}}
 

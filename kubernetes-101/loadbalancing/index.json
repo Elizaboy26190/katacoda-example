@@ -22,10 +22,6 @@
     },
     "steps": [
       {
-        "title": "Setup",
-        "text": "step1.md"
-      },
-      {
         "title": "Ingress Controllers",
         "text": "step3.md"
       },
