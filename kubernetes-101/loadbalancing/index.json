@@ -15,10 +15,6 @@
           "target": "/kubernetes101"
         },
         {
-          "file": "service.yaml",
-          "target": "/kubernetes101"
-        },
-        {
           "file": "rc.yaml",
           "target": "/kubernetes101"
         }
@@ -28,18 +24,6 @@
       {
         "title": "Setup",
         "text": "step1.md"
-      },
-      {
-        "title": "Services",
-        "text": "step1a.md"
-      },
-      {
-        "title": "Example - Creating a service using an external IP",
-        "text": "step1-externalip.md"
-      },
-      {
-        "title": "Labels",
-        "text": "step2.md"
       },
       {
         "title": "Ingress Controllers",
