@@ -18,7 +18,7 @@ If we have an existing replication controller, we can then expose the rc using a
 
 To begin with, let's create a replication controller using our example `rc.yaml`{{open}} file that we have created for you by running `kubectl apply -f rc.yaml`{{execute}} so that we can have the resources available.
 
-As we know that our docker image exposes port 80 internally, we can run `kubectl expose rc nginx --port=8765 --target-port=80         --name=http-service --type=LoadBalancer` to expose our service on port 8765 using a cloud provided loadbalancer.
+As we know that our docker image exposes port 80 internally, we can run `kubectl expose rc nginx --port=8765 --target-port=80         --name=http-service --type=LoadBalancer`{{execute}} to expose our service on port 8765 using a cloud provided loadbalancer.
 
 In order to get access to the ip for our new load balancer we can run `export LoadBalancerIP=$(kubectl get services/http-service -o jsonpath='{.spec.clusterIP}')`{{execute}}.
 
@@ -33,20 +33,26 @@ What we can see is that each time we `curl` the server we can see that it balanc
 Alternatively we can set up our service file in a similar way to before, but with the addition the following line at the end of our service within the `spec` section.
 
 <pre>  type: LoadBalancer</pre>
-
+Let's begin by opening our `loadbalancer.yaml`{{open}} file.
 <pre class="file"
 data-filename="loadbalancer.yaml"
 data-target="replace">
 apiVersion: v1
 kind: Service
 metadata:
-  name: example-service
+  name: yaml-service
 spec:
   selector:
     app: http
   ports:
     - port: 8765
-      targetPort: 9376
+      targetPort: 80
   type: LoadBalancer</pre>
-  
-We can then run similar commands to spread the workload. `export LoadBalancerIP=$(kubectl get services/http-service -o jsonpath='{.spec.clusterIP}')`{{execute}}
+Then let's create our loadbalancer by running `kubectl apply -f loadbalancer.yaml`{{execute}}
+
+We can then run similar commands to spread the workload. `export LoadBalancerYamlIP=$(kubectl get services/yaml-service -o jsonpath='{.spec.clusterIP}')`{{execute}}
+
+We can verify the IP by running `echo LoadBalancerYamlIP=$LoadBalancerYamlIP`{{execute}}`
+
+And test we can see a response similarly as well
+`curl $LoadBalancerYamlIP:8765`{{execute}}

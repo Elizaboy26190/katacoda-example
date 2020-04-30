@@ -1,15 +1,11 @@
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
+apiVersion: v1
+kind: Service
 metadata:
-  name: example-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+  name: yaml-service
 spec:
-  rules:
-    - host: kubernetes101.info
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: web
-              servicePort: 8080
+  selector:
+    app: http
+  ports:
+    - port: 8765
+      targetPort: 80
+  type: LoadBalancer

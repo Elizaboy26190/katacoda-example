@@ -2,7 +2,7 @@ To test ability of our ingress controller to divert traffic to the correct pod w
 
 `kubectl run web2 --image=gcr.io/google-samples/hello-app:2.0`{{execute}}
 
-and expose the deployment again `kubectl expose deployment web2 --target-port=8080 --type=NodePort`{{execute}}
+and expose the deployment again `kubectl expose deployment web2 --type=NodePort --port=8080`{{execute}}
 
 ## Task
 
@@ -11,7 +11,8 @@ Open the `ingress.yaml`{{open}} file and add the following code to the end of th
              backend:
                serviceName: web2
                servicePort: 8080</pre>
-               
+>**Note** YAML can be extremely sensitive to indentation so ensure that this path sits directly below the current path.
+
 and apply the changes `kubectl apply -f ingress.yaml`{{execute}}.
 
 This will divert all traffic with the path `/v2/*` to the web2 app and all other traffic to the `web` app.

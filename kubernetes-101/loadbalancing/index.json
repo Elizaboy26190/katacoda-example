@@ -13,17 +13,29 @@
         {
           "file": "loadbalancer.yaml",
           "target": "/kubernetes101"
+        },
+        {
+          "file": "service.yaml",
+          "target": "/kubernetes101"
+        },
+        {
+          "file": "rc.yaml",
+          "target": "/kubernetes101"
         }
       ]
     },
     "steps": [
       {
-        "title": "Sertup",
+        "title": "Setup",
         "text": "step1.md"
       },
       {
         "title": "Services",
         "text": "step1a.md"
+      },
+      {
+        "title": "External IP",
+        "text": "step1-externalip.md"
       },
       {
         "title": "Labels",
@@ -43,13 +55,12 @@
       },
       {
         "title": "Set up our second app",
-        "text": "step6.md"
+        "text": "step6.md",
+        "answer": "step6-answer.md"
       },
-
       {
         "title": "Testing our ingress controller",
-        "text": "step7.md",
-        "answer": "step7-answer.md"
+        "text": "step7.md"
       },
       {
         "title": "Load Balancers",
