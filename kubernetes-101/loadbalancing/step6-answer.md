@@ -1,4 +1,4 @@
-Open the `ingress.yaml`{{open}} file
+Open the following file `ingress.yaml`{{open}}
 
 <pre class="file"
 data-filename="ingress.yaml"
@@ -22,3 +22,5 @@ spec:
         backend:
           serviceName: web2
           servicePort: 8080</pre>
+          
+and apply the changes `kubectl apply -f ingress.yaml`{{execute}}.
