@@ -44,17 +44,16 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    run: http
-  name: http
+    app: http
+  name: http2
 spec:
-  externalIPs: 
-    - [[HOST_IP]]
+  externalIPs:
+  - 172.17.0.112
   ports:
   - port: 8001
-    protocol: TCP
     targetPort: 80
   selector:
-    run: http</pre>
+    app: http</pre>
 
 
 You can then run `kubectl apply -f service.yaml`{{execute}}.

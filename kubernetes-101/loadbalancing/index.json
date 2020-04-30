@@ -9,6 +9,10 @@
         {
           "file": "ingress.yaml",
           "target": "/kubernetes101"
+        },
+        {
+          "file": "loadbalancer.yaml",
+          "target": "/kubernetes101"
         }
       ]
     },
@@ -46,6 +50,10 @@
         "title": "Testing our ingress controller",
         "text": "step7.md",
         "answer": "step7-answer.md"
+      },
+      {
+        "title": "Load Balancers",
+        "text": "step8.md"
       }
     ],
     "intro": {
