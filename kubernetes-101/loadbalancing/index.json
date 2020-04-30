@@ -1,7 +1,7 @@
 {
   "title": "LoadBalancing and Scaling",
   "description": "Tutorial on LoadBalancing and scaling",
-  "difficulty": "Beginner",
+  "difficulty": "Intermediate",
   "time": "30",
   "details": {
     "assets": {
@@ -34,7 +34,7 @@
         "text": "step1a.md"
       },
       {
-        "title": "External IP",
+        "title": "Example - Creating a service using an external IP",
         "text": "step1-externalip.md"
       },
       {

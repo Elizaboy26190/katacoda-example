@@ -1,5 +1,4 @@
 
-## Example - Creating a service using an external IP
 With the deployment created, we can use **kubectl** to create a service which exposes the Pods on a particular port so that we can access it externally.
 
 We can expose the container port `80` to the external port `8000` binding to the `external-ip` of the host.
