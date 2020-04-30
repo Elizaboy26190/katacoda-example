@@ -4,7 +4,7 @@ metadata:
   name: yaml-service
 spec:
   selector:
-    app: http
+    app: nginx
   ports:
     - port: 8765
       targetPort: 80

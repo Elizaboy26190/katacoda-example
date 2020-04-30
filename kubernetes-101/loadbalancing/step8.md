@@ -43,11 +43,12 @@ metadata:
   name: yaml-service
 spec:
   selector:
-    app: http
+    app: nginx
   ports:
     - port: 8765
       targetPort: 80
   type: LoadBalancer</pre>
+  
 Then let's create our loadbalancer by running `kubectl apply -f loadbalancer.yaml`{{execute}}
 
 We can then run similar commands to spread the workload. `export LoadBalancerYamlIP=$(kubectl get services/yaml-service -o jsonpath='{.spec.clusterIP}')`{{execute}}
