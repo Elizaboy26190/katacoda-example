@@ -1,6 +1,6 @@
 Cluster IP is the default approach when creating a Kubernetes Service. The service is allocated an internal IP that other components can use to access the pods.
 
-By having a single IP address it enables the service to be load balanced across multiple Pods (which we will cover in more detail in a different scenario).
+By having a single IP address, it enables the service to be load balanced across multiple Pods (which we will cover in more detail in a different scenario).
 
 ## Task
 
@@ -12,6 +12,7 @@ This will then expose our http deployment and create a service called `http`.
 
 We can get the cluster's IP address by running 
 `export CLUSTER_IP=$(kubectl get services/http -o go-template='{{(index .spec.clusterIP)}}')`{{execute}}
+
 and can view it by running
 `echo CLUSTER_IP=$CLUSTER_IP`{{execute}}
 
@@ -39,8 +40,7 @@ metadata:
   name: clusterhttp
 spec:
   ports:
-  - port: 8002
-    targetPort: 80
+  - port: 80
   selector:
     app: http</pre>
 

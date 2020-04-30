@@ -1,16 +1,21 @@
 {
-  "title": "LoadBalancing and Scaling",
-  "description": "Tutorial on LoadBalancing and scaling",
+  "title": "Services - Exposing your deployments",
+  "description": "Tutorial on exposing your ap to the cluster and outside using services",
   "difficulty": "Intermediate",
   "time": "30",
   "details": {
     "assets": {
       "host01": [
         {
-          "file": "service.yaml",
+          "file": "external.yaml",
           "target": "/kubernetes101"
-        }, {
+        },
+        {
           "file": "deployment.yaml",
+          "target": "/kubernetes101"
+        },
+        {
+          "file": "cluster.yaml",
           "target": "/kubernetes101"
         }
       ]
@@ -25,16 +30,28 @@
         "text": "step1a.md"
       },
       {
+        "title": "Labels",
+        "text": "step2.md"
+      },
+      {
         "title": "Example - Creating a service using a clusterIP",
         "text": "step1-clusterip.md"
+      },
+      {
+        "title": "Example - Creating a service using Target Port",
+        "text": "step1-targetport.md"
       },
       {
         "title": "Example - Creating a service using an external IP",
         "text": "step1-externalip.md"
       },
       {
-        "title": "Labels",
-        "text": "step2.md"
+        "title": "Example - Creating a service using Node Port",
+        "text": "step1-nodeport.md"
+      },
+      {
+        "title": "Example - Creating a service using Node Port",
+        "text": "step1-nodeport.md"
       }
     ],
     "intro": {
@@ -45,9 +62,6 @@
       "text": "finish.md"
     }
   },
-  "files": [
-    "deployment.yaml", "service.yaml"
-  ],
   "environment": {
     "hideHiddenFiles": true,
     "uilayout": "editor-terminal",
