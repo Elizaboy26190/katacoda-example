@@ -9,6 +9,9 @@
         {
           "file": "service.yaml",
           "target": "/kubernetes101"
+        }, {
+          "file": "deployment.yaml",
+          "target": "/kubernetes101"
         }
       ]
     },
