@@ -28,31 +28,6 @@
       {
         "title": "Labels",
         "text": "step2.md"
-      },
-      {
-        "title": "Ingress Controllers",
-        "text": "step3.md"
-      },
-      {
-        "title": "Set up first app",
-        "text": "step4.md"
-      },
-      {
-        "title": "Ingress rules",
-        "text": "step5.md"
-      },
-      {
-        "title": "Set up our second app",
-        "text": "step6.md",
-        "answer": "step6-answer.md"
-      },
-      {
-        "title": "Testing our ingress controller",
-        "text": "step7.md"
-      },
-      {
-        "title": "Load Balancers",
-        "text": "step8.md"
       }
     ],
     "intro": {
