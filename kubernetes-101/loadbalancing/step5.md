@@ -19,7 +19,7 @@ spec:
       - path: /
         backend:
           serviceName: web
-          servicePort: 80</pre>
+          servicePort: 8080</pre>
           
 Create the Ingress resource by running the following command:
 `kubectl apply -f ingress.yaml`{{execute}}

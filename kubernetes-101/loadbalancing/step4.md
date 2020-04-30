@@ -8,7 +8,7 @@ Create a deployment entitled `web`.
 
 Expose our deployment using the NodePort type
 
-`kubectl expose deployment web --type=NodePort --port=80`{{execute}}
+`kubectl expose deployment web --type=NodePort --port=8080`{{execute}}
 
 Verify the Service is created and is available on a node port:
 
