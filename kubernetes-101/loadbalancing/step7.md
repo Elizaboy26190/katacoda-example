@@ -1,12 +1,12 @@
 We now should have both our deployments running and our ingress controller should be able to divert traffic.
 
-Access the first `web` app by running `curl kubernets101.info`{{execute}}.
+Access the first `web` app by running `curl kubernetes101.info`{{execute}}.
 
 You should see the request returns a response similar to the one below (with the hostname replaced by your pod name) showing the request hit the `web` app.
 
 <pre>
 Hello, world!
-Version: 2.0.0
+Version: 1.0.0
 Hostname: web-764b75c5d6-lwrh9
 </pre>
 

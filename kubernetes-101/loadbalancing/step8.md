@@ -33,7 +33,9 @@ What we can see is that each time we `curl` the server we can see that it balanc
 Alternatively we can set up our service file in a similar way to before, but with the addition the following line at the end of our service within the `spec` section.
 
 <pre>  type: LoadBalancer</pre>
+
 Let's begin by opening our `loadbalancer.yaml`{{open}} file.
+
 <pre class="file"
 data-filename="loadbalancer.yaml"
 data-target="replace">
