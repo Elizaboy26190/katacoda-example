@@ -21,6 +21,6 @@ spec:
       - path: /v2/*
         backend:
           serviceName: web2
-          servicePort: 8081</pre>
+          servicePort: 8080</pre>
           
 and apply the changes `kubectl apply -f ingress.yaml`{{execute}}.

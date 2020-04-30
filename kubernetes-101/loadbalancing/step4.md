@@ -4,7 +4,7 @@ For our next exercises to test the ingress controller we wil begin by using the 
 
 Create a deployment entitled `web`.
 
-`kubectl create deployment web --image=gcr.io/google-samples/hello-app:1.0 --port=8080`{{execute}}
+`kubectl create deployment web --image=gcr.io/google-samples/hello-app:1.0`{{execute}}
 
 Expose our deployment using the NodePort type
 

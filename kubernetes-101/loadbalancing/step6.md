@@ -1,8 +1,8 @@
 To test ability of our ingress controller to divert traffic to the correct pod we will create a second pod.
 
-`kubectl create deployment web2 --image=katacoda/docker-http-server`{{execute}}
+`kubectl create deployment web2 --image=gcr.io/google-samples/hello-app:2.0`{{execute}}
 
-and expose the deployment again `kubectl expose deployment web2 --type=NodePort --port=8081`{{execute}}
+and expose the deployment again `kubectl expose deployment web2 --type=NodePort --port=8080`{{execute}}
 
 ## Task
 We can test our ability to divert traffic to this new app by adding a rule so that any url that begins with `/v2` gets sent to the new app.
@@ -13,7 +13,7 @@ data-filename="ingress.yaml"
 data-target="append">      - path: /v2/*
         backend:
           serviceName: web2
-          servicePort: 8081</pre>
+          servicePort: 8080</pre>
 >**Note** YAML can be extremely sensitive to indentation so ensure that this path sits directly below the current path.
 
 and apply the changes `kubectl apply -f ingress.yaml`{{execute}}.
