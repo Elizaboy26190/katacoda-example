@@ -25,6 +25,10 @@
         {
           "file": "nodeport.yaml",
           "target": "/kubernetes101"
+        },
+        {
+          "file": "exercise.yaml",
+          "target": "/kubernetes101"
         }
       ]
     },
@@ -56,6 +60,10 @@
       {
         "title": "Example - Creating a service using Node Port",
         "text": "step1-nodeport.md"
+      },
+      {
+        "title": "Exercises",
+        "text": "exercises.md"
       },
       {
         "title": "Example - Port forwarding",

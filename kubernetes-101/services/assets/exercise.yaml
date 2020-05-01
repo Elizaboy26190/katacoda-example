@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exercise
+  labels:
+    app: exercise
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: exercise
+  template:
+    metadata:
+      labels:
+        app: exercise
+    spec:
+      containers:
+        - name: exercise
+          image: katacoda/docker-http-server:latest
+          ports:
+            - containerPort: 80
