@@ -17,5 +17,6 @@ Hello, world!
 Version: 2.0.0
 Hostname: web2-6c595b99d4-slcfx
 </pre>
+>Note: If the v2 url isn't working, again verify that the web2 app is running and exposed.
 
 This shows that the request was sent to the `web2` app and our ingress rule is successful.
