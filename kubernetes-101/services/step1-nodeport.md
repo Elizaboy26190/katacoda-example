@@ -4,12 +4,12 @@ While TargetPort and ClusterIP make it available to inside the cluster, the Node
 
 Let's start by exposing our http deployment using a default service.
 
-This can be done via kubectl by running `kubectl expose deployment http --name=nodeporthttp --port=8004 --target-port=80 --type=NodePort`{{execute}}.
+This can be done via kubectl by running `kubectl expose deployment http --name=nodeporthttp --type=NodePort`{{execute}}.
 
 This will then expose our http deployment and create a service called `nodeporthttp`.
 
 We can get the cluster's assigned Nodeport by running 
-`NODEPORT=$(kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services nodeporthttp)`{{execute}}
+`export NODEPORT=$(kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services nodeporthttp)`{{execute}}
 
 and can view it by running
 `echo NODEPORT=$NODEPORT`{{execute}}

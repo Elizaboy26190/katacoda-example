@@ -19,6 +19,8 @@ and can view it by running
 To verify our service is running we can send a request to the service.
 `curl $CLUSTER_IP`{{execute}}
 
+You should see a response similar to `<h1>This request was processed by host: http-768f8fdbc-fzqlr</h1>` where the exact pod name is replaced with the pod name assigned for you by the deployment.
+
 If we run the `curl` command multiple times, you should be able to see each of the 3 pods being cycled showing that the clusterIP is balancing the load across the pods.
 
 ## Task
