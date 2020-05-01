@@ -18,7 +18,7 @@ If we have an existing replication controller, we can then expose the rc using a
 
 To begin with, let's create a replication controller using our example `rc.yaml`{{open}} file that we have created for you by running `kubectl apply -f rc.yaml`{{execute}} so that we can have the resources available.
 
-As we know that our docker image exposes port 80 internally, we can run `kubectl expose rc nginx --port=8765 --target-port=80         --name=http-service --type=LoadBalancer`{{execute}} to expose our service on port 8765 using a cloud provided loadbalancer.
+As we know that our docker image exposes port 80 internally, we can run `kubectl expose rc nginx --port=8765 --target-port=80 --name=http-service --type=LoadBalancer`{{execute}} to expose our service on port 8765 using a cloud provided loadbalancer.
 
 In order to get access to the ip for our new load balancer we can run `export LoadBalancerIP=$(kubectl get services/http-service -o jsonpath='{.spec.clusterIP}')`{{execute}}.
 

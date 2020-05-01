@@ -5,6 +5,8 @@ To begin with, we need to set up our replication controller `exercise-nginx` whi
 **Exercise 1** 
 
 Expose the docker image on port 5678 using the `LoadBalancer` type noting the target-port is `80` for the docker image.
+> Solution
+>Run `kubectl expose rc nginx --port=5678 --target-port=80         --name=http-service --type=LoadBalancer`
 
 In order to get access to the ip for our new load balancer we can run `export LoadBalancerExerciseIP=$(kubectl get services/http-service -o jsonpath='{.spec.clusterIP}')`{{execute}}.
 
