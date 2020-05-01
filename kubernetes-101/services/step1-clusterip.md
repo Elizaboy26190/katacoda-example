@@ -17,7 +17,7 @@ and can view it by running
 `echo CLUSTER_IP=$CLUSTER_IP`{{execute}}
 
 To verify our service is running we can send a request to the service.
-`curl $CLUSTER_IP:80`{{execute}}
+`curl $CLUSTER_IP`{{execute}}
 
 If we run the `curl` command multiple times, you should be able to see each of the 3 pods being cycled showing that the clusterIP is balancing the load across the pods.
 
@@ -55,6 +55,6 @@ and can view it by running
 `echo CLUSTER_YAML_IP=$CLUSTER_YAML_IP`{{execute}}
 
 To verify our service is running we can send a request to the service.
-`curl $CLUSTER_YAML_IP:8002`{{execute}}.
+`curl $CLUSTER_YAML_IP`{{execute}}.
 
 By running this curl request multiple times this should cycle through the 3 pods.
