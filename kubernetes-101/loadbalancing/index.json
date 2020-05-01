@@ -61,7 +61,8 @@
 
       {
         "title": "Exercises - LoadBalancer",
-        "text": "exercises-lb.md"
+        "text": "exercises-lb.md",
+        "answer": "solution-lb.md"
       }
     ],
     "intro": {
