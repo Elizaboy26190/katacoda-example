@@ -27,7 +27,7 @@ We can also expose our service using a YAML manifest as before.
 
 Begin by opening the `cluster.yaml`{{open}}.
 
-You should see the yaml code to create our service, but if it doesn't work you can click `copy to file` to copy the following code over.
+You should see the yaml code to create our service, but if it doesn't work you can click `copy to editor` to copy the following code over.
 
 <pre class="file"
 data-filename="cluster.yaml"
@@ -55,4 +55,6 @@ and can view it by running
 `echo CLUSTER_YAML_IP=$CLUSTER_YAML_IP`{{execute}}
 
 To verify our service is running we can send a request to the service.
-`curl $CLUSTER_YAML_IP:8002`{{execute}}
+`curl $CLUSTER_YAML_IP:8002`{{execute}}.
+
+By running this curl request multiple times this should cycle through the 3 pods.

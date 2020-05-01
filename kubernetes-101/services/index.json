@@ -50,8 +50,8 @@
         "text": "step1-nodeport.md"
       },
       {
-        "title": "Example - Creating a service using Node Port",
-        "text": "step1-nodeport.md"
+        "title": "Example - Port forwarding",
+        "text": "step1-portforward.md"
       }
     ],
     "intro": {

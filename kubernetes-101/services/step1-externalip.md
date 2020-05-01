@@ -5,13 +5,15 @@ With the deployment created, we can use **kubectl** to create a service which ex
 
 We can expose the container port `80` to the external port `8002` binding to the `external-ip` of the host.
 
-We can expose our `externalhttp` deployment on port `80` by running `kubectl expose deployment externalhttp --external-ip="[[HOST_IP]]" --port=8002 --target-port=80`{{execute}}
+We can expose our `externalhttp` deployment on port `80` by running `kubectl expose deployment http --name=externalhttp --external-ip="[[HOST_IP]]" --port=8002 --target-port=80`{{execute}}
 
 You will then be able to ping the host and see the result from the HTTP service.
 
 `curl http://[[HOST_IP]]:8002`{{execute}}
 
 You can then see the response `<h1>This request was processed by host: http-768f8fdbc-fzqlr</h1>` where the **http-768f8fdbc-fzqlr** is replaced by the pod name found by running `kubectl get pods -l app=http`{{execute}}.
+
+By running this curl request multiple times this should cycle through the 3 pods.
 
 You should also now be able to see the new service under `kubectl get svc`{{execute}}.
 
@@ -49,3 +51,5 @@ You will then be able to ping the host and see the result from the HTTP service.
 `curl http://[[HOST_IP]]:8003`{{execute}}
 
 You should then be able to see the same response as the previous service (as both point to the same underlying app)  `<h1>This request was processed by host: http-768f8fdbc-fzqlr</h1>` where the **http-768f8fdbc-fzqlr** is replaced by the pod name found by running `kubectl get pods -l app=http`{{execute}}.
+
+By running this curl request multiple times this should cycle through the 3 pods.

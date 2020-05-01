@@ -7,13 +7,21 @@ With the deployment created, we can use **kubectl** to create a service which ex
 
 We can expose the container port `80` to the external port `8000` of the host.
 
-We can expose our `targetporthttp` deployment on port `80` by running `kubectl expose deployment targetporthttp --port=8000 --target-port=80`{{execute}}
+We can expose our `targetporthttp` deployment on port `80` by running `kubectl expose deployment http --name=targetporthttp --port=8000 --target-port=80`{{execute}}
+>Note the use of the `name` argument so that we can provide a new name for the service as we have already created a service called `http`
 
 You will then be able to ping the host and see the result from the HTTP service.
+We can get the cluster's IP address by running 
+`export CLUSTER_TARGETPORT_IP=$(kubectl get services/targetporthttp -o go-template='{{(index .spec.clusterIP)}}')`{{execute}}
 
-`curl http://[[HOST_IP]]:8000`{{execute}}
+and can view it by running
+`echo CLUSTER_TARGETPORT_IP=$CLUSTER_TARGETPORT_IP`{{execute}}
 
+To verify our service is running we can send a request to the service.
+`curl $CLUSTER_TARGETPORT_IP:80`{{execute}}
 You can then see the response `<h1>This request was processed by host: http-768f8fdbc-fzqlr</h1>` where the **http-768f8fdbc-fzqlr** is replaced by the pod name found by running `kubectl get pods -l app=http`{{execute}}.
+
+By running this curl request multiple times this should cycle through the 3 pods.
 
 You should also now be able to see the new service under `kubectl get svc`{{execute}}.
 
@@ -46,6 +54,15 @@ You should also now be able to see the new service under `kubectl get svc`{{exec
 
 You will then be able to ping the host and see the result from the HTTP service.
 
-`curl http://[[HOST_IP]]:8001`{{execute}}
+We can get the cluster's IP address by running 
+`export CLUSTER_TARGETPORT_YAML_cIP=$(kubectl get services/targetportyaml -o go-template='{{(index .spec.clusterIP)}}')`{{execute}}
+
+and can view it by running
+`echo CLUSTER_TARGETPORT_YAML_IP=$CLUSTER_TARGETPORT_YAML_IP`{{execute}}
+
+To verify our service is running we can send a request to the service.
+`curl $CLUSTER_TARGETPORT_YAML_IP:80`{{execute}}
+
+By running this curl request multiple times this should cycle through the 3 pods.
 
 You should then be able to see the same response as the previous service (as both point to the same underlying app)  `<h1>This request was processed by host: http-768f8fdbc-fzqlr</h1>` where the **http-768f8fdbc-fzqlr** is replaced by the pod name found by running `kubectl get pods -l app=http`{{execute}}.

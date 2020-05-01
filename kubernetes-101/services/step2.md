@@ -1,8 +1,8 @@
-The Deployments we have just created automatically add a label for our Pods.
+The Deployment and pods we have just created automatically add a label for our Pods.
 
 You can check any of our labels by running the following command
 
-`kubectl describe deployment`{{execute}}
+`kubectl describe deployment -l app=http`{{execute}}
 
 We can then use this label to query our pods.
  
@@ -16,14 +16,16 @@ You can do the same to list the existing services:
 
 Get the name of the Pod and store it in the POD_NAME environment variable:
 
-`export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
-echo Name of the Pod: $POD_NAME`{{execute}}
+`export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')`{{execute}}
+
+We can then check the pod name by running
+`echo Name of the Pod: $POD_NAME`{{execute}}
 
 To apply a new label we use the label command followed by the object type, object name and the new label:
 
 `kubectl label pod $POD_NAME customlabel=condenast`{{execute}}
 
-This will apply a new label to our Pod (we pinned the application version to the Pod), and we can check it with the describe pod command:
+This will apply a new label to our 3 http Pods (we pinned the application version to the Pod), and we can check it with the describe pod command:
 
 `kubectl describe pods $POD_NAME`{{execute}}
 
