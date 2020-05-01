@@ -38,7 +38,7 @@ You should see a response similar to the one below with the hostname replaced by
 
 <pre>
 Hello, world!
-Version: 2.0.0
+Version: 1.0.0
 Hostname: web-764b75c5d6-lwrh9
 </pre>
 >Note: If the request responds with `503` then wait for the deployment to be up and running by running `kubectl get pods -l app=web`
