@@ -73,7 +73,7 @@ spec:
         backend:
           serviceName: exercise
           servicePort: 8080
-      - path: /v2/*
+      - path: /exercise/*
         backend:
           serviceName: exercise2
           servicePort: 8080</pre>
