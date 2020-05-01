@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: http
+  name: targetportyaml
+spec:
+  ports:
+    - port: 8001
+      targetPort: 80
+  selector:
+    app: http

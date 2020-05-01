@@ -24,7 +24,7 @@ There are a number of other candidates that we can use for the controller.
 For this environment, for simplicity we will use the minikube ingress controller.
 
 To enable the NGINX Ingress controller, run the following command:
-`minikube addons enable ingress`{{execute}}
+`minikube addons enable ingress`. This has been done for our scenario.
 
 Verify that the NGINX Ingress controller is running
 `kubectl get pods -n kube-system`{{execute}}

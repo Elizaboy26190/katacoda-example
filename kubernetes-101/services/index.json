@@ -17,6 +17,14 @@
         {
           "file": "cluster.yaml",
           "target": "/kubernetes101"
+        },
+        {
+          "file": "targetport.yaml",
+          "target": "/kubernetes101"
+        },
+        {
+          "file": "nodeport.yaml",
+          "target": "/kubernetes101"
         }
       ]
     },
