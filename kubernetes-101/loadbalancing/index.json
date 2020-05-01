@@ -11,6 +11,10 @@
           "target": "/kubernetes101"
         },
         {
+          "file": "ingress-template",
+          "target": "/kubernetes101"
+        },
+        {
           "file": "loadbalancer.yaml",
           "target": "/kubernetes101"
         },

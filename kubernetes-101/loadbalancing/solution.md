@@ -54,6 +54,30 @@ Hostname: exercise-764b75c5d6-lwrh9
 
 Edit the `ingress-template.yaml`{{open}} to modify the ingress rules so that a new rule is added so that any traffic with `/exercise/` at the root of the url divert to the `exercise2` app.
 
+>Solution
+<pre class="file"
+data-filename="ingress-template.yaml"
+data-target="replace">
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: exercise
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+  - host: exercise101.info
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: exercise
+          servicePort: 8080
+      - path: /v2/*
+        backend:
+          serviceName: exercise2
+          servicePort: 8080</pre>
+
 Run `kubectl apply -f ingress-template.yaml`{{open}} to update the ingress rules.
 
 Test that the rules are working by running the following commands.
