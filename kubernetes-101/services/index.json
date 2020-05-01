@@ -63,7 +63,8 @@
       },
       {
         "title": "Exercises",
-        "text": "exercises.md"
+        "text": "exercises.md",
+        "answer": "solution.md"
       },
       {
         "title": "Example - Port forwarding",
