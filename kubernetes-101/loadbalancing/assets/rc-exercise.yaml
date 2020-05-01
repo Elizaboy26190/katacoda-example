@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: exercise-nginx
+spec:
+  replicas: 3
+  selector:
+    app: exercise-nginx
+  template:
+    metadata:
+      name: exercise-nginx
+      labels:
+        app: exercise-nginx
+    spec:
+      containers:
+        - name: exercise-nginx
+          image: katacoda/docker-http-server
+          ports:
+            - containerPort: 80
