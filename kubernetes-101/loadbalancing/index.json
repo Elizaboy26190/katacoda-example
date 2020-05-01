@@ -11,7 +11,7 @@
           "target": "/kubernetes101"
         },
         {
-          "file": "ingress-template",
+          "file": "ingress-template.yaml",
           "target": "/kubernetes101"
         },
         {
