@@ -8,7 +8,7 @@ Expose the docker image on port 5678 using the `LoadBalancer` type noting the ta
 
 In order to get access to the ip for our new load balancer we can run `export LoadBalancerExerciseIP=$(kubectl get services/http-service -o jsonpath='{.spec.clusterIP}')`{{execute}}.
 
-To check the IP address we can run `echo LoadBalancerExerciseIP=$LoadBalancerExerciseIP`{{execute}} and can access the apps by running `curl $LoadBalancerExerciseIP:8765`{{execute}}
+To check the IP address we can run `echo LoadBalancerExerciseIP=$LoadBalancerExerciseIP`{{execute}} and can access the apps by running `curl $LoadBalancerExerciseIP:5678`{{execute}}
 
 We should see `<h1>This request was processed by host: exercise-nginx-4vfzj</h1>`
 (where the host is replaced by your pod names) returned.
