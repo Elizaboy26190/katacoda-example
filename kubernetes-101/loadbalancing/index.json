@@ -1,6 +1,6 @@
 {
-  "title": "LoadBalancing and Scaling",
-  "description": "Tutorial on LoadBalancing and scaling",
+  "title": "Ingress and LoadBalancing",
+  "description": "Tutorial on Ingress and LoadBalancing",
   "difficulty": "Intermediate",
   "time": "30",
   "details": {
