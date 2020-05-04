@@ -82,6 +82,7 @@
   "environment": {
     "hideHiddenFiles": true,
     "uilayout": "editor-terminal",
+    "uisettings": "yaml",
     "uieditorpath": "/kubernetes101"
   },
   "backend": {
